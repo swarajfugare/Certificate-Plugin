@@ -1,0 +1,877 @@
+/* SmartCertify - Two-Column Floating Container Design */
+
+/* ============================================
+   COLOR PALETTE
+   ============================================ */
+
+:root {
+    --sc-primary: #1ab69d;           /* Teal/Turquoise */
+    --sc-primary-dark: #169086;      /* Darker teal */
+    --sc-text: #333333;              /* Dark text */
+    --sc-text-light: #666666;        /* Light gray text */
+    --sc-border: #e0e0e0;            /* Border color */
+    --sc-bg-white: #ffffff;          /* White background */
+    --sc-bg-grey: #f8f8f8;           /* Light grey background */
+    --sc-page-bg: #fafafa;           /* Page background */
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: var(--sc-text);
+    background-color: var(--sc-page-bg);
+    line-height: 1.5;
+}
+
+/* ============================================
+   MAIN WRAPPER
+   ============================================ */
+
+.sc-elegant-wrapper {
+    background-color: var(--sc-page-bg);
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+/* ============================================
+   MAIN FLOATING CONTAINER
+   ============================================ */
+
+.sc-elegant-container {
+    width: 100%;
+    max-width: 1000px;
+    background: var(--sc-bg-white);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/* ============================================
+   TWO-COLUMN LAYOUT
+   ============================================ */
+
+.sc-elegant-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    width: 100%;
+    align-items: stretch;
+}
+
+/* ============================================
+   LEFT COLUMN - INFORMATION SECTION
+   ============================================ */
+
+.sc-info-box {
+    background-color: var(--sc-bg-grey);
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.sc-box-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--sc-text);
+    margin-bottom: 24px;
+    border-bottom: 2px solid var(--sc-primary);
+    padding-bottom: 12px;
+}
+
+.sc-info-box-header {
+    margin-bottom: 30px;
+}
+
+.sc-elegant-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--sc-text);
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.sc-elegant-subtitle {
+    font-size: 15px;
+    color: var(--sc-text-light);
+    line-height: 1.6;
+}
+
+/* ============================================
+   STEPS SECTION
+   ============================================ */
+
+.sc-steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sc-step {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.sc-step-number {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    background-color: var(--sc-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.sc-step-content {
+    flex: 1;
+}
+
+.sc-step-content h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--sc-text);
+    margin-bottom: 4px;
+}
+
+.sc-step-content p {
+    font-size: 13px;
+    color: var(--sc-text-light);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ============================================
+   RIGHT COLUMN - FORM SECTION
+   ============================================ */
+
+.sc-form-box {
+    background-color: var(--sc-bg-white);
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.sc-form-box-header {
+    margin-bottom: 25px;
+}
+
+.sc-form-box-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--sc-text);
+    margin-bottom: 8px;
+}
+
+.sc-form-box-description {
+    font-size: 13px;
+    color: var(--sc-text-light);
+    line-height: 1.5;
+}
+
+/* ============================================
+   FORM STYLES
+   ============================================ */
+
+.sc-elegant-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.sc-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.sc-form-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--sc-text);
+    margin-bottom: 8px;
+    text-transform: capitalize;
+}
+
+.sc-form-input,
+.sc-form-select {
+    width: 100%;
+    padding: 11px 13px;
+    border: 1px solid var(--sc-border);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--sc-text);
+    background-color: var(--sc-bg-white);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    line-height: 1.4;
+}
+
+.sc-form-input:hover,
+.sc-form-select:hover {
+    border-color: #bbb;
+}
+
+.sc-form-input:focus,
+.sc-form-select:focus {
+    outline: none;
+    border-color: var(--sc-primary);
+    box-shadow: 0 0 0 3px rgba(26, 182, 157, 0.1);
+}
+
+.sc-form-input::placeholder {
+    color: #999;
+}
+
+.sc-form-hint {
+    display: block;
+    font-size: 12px;
+    color: var(--sc-text-light);
+    margin-top: 6px;
+}
+
+.sc-info-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(26, 182, 157, 0.1);
+    color: var(--sc-primary);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.sc-info-badge svg {
+    flex-shrink: 0;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.sc-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.sc-btn-primary {
+    width: 100%;
+    background-color: var(--sc-primary);
+    color: white;
+    margin-top: 8px;
+}
+
+.sc-btn-primary:hover {
+    background-color: var(--sc-primary-dark);
+    box-shadow: 0 2px 8px rgba(26, 182, 157, 0.2);
+}
+
+.sc-btn-primary:active {
+    opacity: 0.95;
+}
+
+.sc-btn-secondary {
+    flex: 1;
+    background-color: transparent;
+    color: var(--sc-primary);
+    border: 1px solid var(--sc-primary);
+}
+
+.sc-btn-secondary:hover {
+    background-color: rgba(26, 182, 157, 0.05);
+}
+
+.sc-btn-full {
+    width: 100%;
+}
+
+.sc-btn-lg {
+    padding: 13px 24px;
+    font-size: 15px;
+    min-height: 48px;
+}
+
+/* ============================================
+   ACTION BUTTONS (Success State)
+   ============================================ */
+
+.sc-action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.sc-action-buttons .sc-btn {
+    width: 100%;
+    margin: 0;
+    padding: 12px 16px;
+}
+
+.sc-action-buttons .sc-btn-primary {
+    margin: 0;
+}
+
+/* ============================================
+   SUCCESS MESSAGE
+   ============================================ */
+
+.sc-success-message {
+    text-align: center;
+    padding: 24px;
+    background-color: #f0faf7;
+    border-left: 4px solid var(--sc-primary);
+    border-radius: 6px;
+    margin-bottom: 24px;
+}
+
+.sc-success-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: var(--sc-primary);
+    color: white;
+    border-radius: 50%;
+    margin-bottom: 14px;
+    font-size: 24px;
+}
+
+.sc-success-message h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--sc-text);
+    margin-bottom: 6px;
+}
+
+.sc-success-message p {
+    font-size: 13px;
+    color: var(--sc-text-light);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ============================================
+   ALERTS & MESSAGES
+   ============================================ */
+
+.sc-alert {
+    padding: 14px 16px;
+    border-radius: 6px;
+    border-left: 4px solid;
+    margin-bottom: 16px;
+    font-size: 13px;
+}
+
+.sc-alert-warning {
+    background-color: #fff9f0;
+    border-left-color: #ff9800;
+    color: var(--sc-text);
+}
+
+.sc-form-message {
+    padding: 13px;
+    border-radius: 6px;
+    margin-top: 14px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.sc-form-message.error {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
+.sc-form-message.success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #81c784;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.sc-text-center {
+    text-align: center;
+}
+
+.sc-text-muted {
+    color: var(--sc-text-light);
+    font-size: 13px;
+}
+
+.sc-mb {
+    margin-bottom: 16px;
+}
+
+/* ============================================
+   VERIFICATION PAGE STYLES
+   ============================================ */
+
+.sc-verify-wrapper {
+    background-color: var(--sc-page-bg);
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.sc-verify-container {
+    width: 100%;
+    max-width: 600px;
+    background: var(--sc-bg-white);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.sc-verify-header {
+    background-color: var(--sc-bg-white);
+    padding: 36px 30px;
+    text-align: center;
+    border-bottom: 1px solid var(--sc-border);
+}
+
+.sc-verify-header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--sc-text);
+    margin-bottom: 8px;
+}
+
+.sc-verify-header p {
+    font-size: 14px;
+    color: var(--sc-text-light);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.sc-verify-content {
+    padding: 36px 30px;
+}
+
+.sc-verify-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.sc-verify-result {
+    padding: 22px;
+    border-radius: 6px;
+    border-left: 4px solid;
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.sc-verify-result.verified {
+    background-color: #e8f5e9;
+    border-left-color: #4caf50;
+}
+
+.sc-verify-result.not-verified {
+    background-color: #ffebee;
+    border-left-color: #f44336;
+}
+
+.sc-verify-result h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.sc-verify-result.verified h3 {
+    color: #2e7d32;
+}
+
+.sc-verify-result.not-verified h3 {
+    color: #c62828;
+}
+
+.sc-verify-result p {
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.sc-verify-result.verified p {
+    color: #388e3c;
+}
+
+.sc-verify-result.not-verified p {
+    color: #d32f2f;
+}
+
+.sc-verify-result-details {
+    text-align: left;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sc-verify-result-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 0;
+    font-size: 12px;
+}
+
+.sc-verify-result-item strong {
+    color: var(--sc-text);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - TABLET (768px)
+   ============================================ */
+
+@media (max-width: 768px) {
+    .sc-elegant-wrapper {
+        padding: 30px 15px;
+        padding-top: 40px;
+    }
+
+    .sc-elegant-container {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    .sc-elegant-layout {
+        grid-template-columns: 1fr;
+        gap: 0;
+        min-height: auto;
+    }
+
+    .sc-info-box {
+        padding: 40px 30px;
+        border-bottom: 1px solid var(--sc-border);
+    }
+
+    .sc-form-box {
+        padding: 40px 30px;
+    }
+
+    .sc-elegant-title {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .sc-elegant-subtitle {
+        font-size: 14px;
+    }
+
+    .sc-form-box-title {
+        font-size: 22px;
+        margin-bottom: 6px;
+    }
+
+    .sc-form-box-description {
+        font-size: 12px;
+    }
+
+    .sc-elegant-form {
+        gap: 15px;
+    }
+
+    .sc-form-input,
+    .sc-form-select {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .sc-btn {
+        padding: 11px 20px;
+        font-size: 13px;
+    }
+
+    .sc-btn-primary {
+        margin-top: 6px;
+    }
+
+    .sc-steps-container {
+        gap: 18px;
+    }
+
+    .sc-step-number {
+        width: 34px;
+        height: 34px;
+        font-size: 15px;
+    }
+
+    .sc-step-content h4 {
+        font-size: 13px;
+    }
+
+    .sc-step-content p {
+        font-size: 12px;
+    }
+
+    .sc-verify-wrapper {
+        padding: 30px 15px;
+        padding-top: 40px;
+    }
+
+    .sc-verify-container {
+        max-width: 100%;
+    }
+
+    .sc-verify-header {
+        padding: 30px 24px;
+    }
+
+    .sc-verify-header h1 {
+        font-size: 23px;
+        margin-bottom: 6px;
+    }
+
+    .sc-verify-header p {
+        font-size: 13px;
+    }
+
+    .sc-verify-content {
+        padding: 30px 24px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - MOBILE (480px)
+   ============================================ */
+
+@media (max-width: 480px) {
+    .sc-elegant-wrapper {
+        padding: 20px 12px;
+        padding-top: 30px;
+    }
+
+    .sc-elegant-container {
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .sc-elegant-layout {
+        min-height: auto;
+    }
+
+    .sc-info-box {
+        padding: 28px 18px;
+        border-bottom: 1px solid var(--sc-border);
+    }
+
+    .sc-form-box {
+        padding: 28px 18px;
+    }
+
+    .sc-info-box-header {
+        margin-bottom: 22px;
+    }
+
+    .sc-elegant-title {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+
+    .sc-elegant-subtitle {
+        font-size: 12px;
+    }
+
+    .sc-form-box-header {
+        margin-bottom: 18px;
+    }
+
+    .sc-form-box-title {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .sc-form-box-description {
+        font-size: 11px;
+    }
+
+    .sc-elegant-form {
+        gap: 13px;
+    }
+
+    .sc-form-group {
+        margin-bottom: 0;
+    }
+
+    .sc-form-label {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    .sc-form-input,
+    .sc-form-select {
+        padding: 10px 11px;
+        font-size: 13px;
+        border-radius: 5px;
+    }
+
+    .sc-btn {
+        padding: 10px 16px;
+        font-size: 12px;
+        border-radius: 5px;
+    }
+
+    .sc-btn-primary {
+        margin-top: 4px;
+        font-size: 13px;
+        padding: 11px 16px;
+    }
+
+    .sc-action-buttons {
+        gap: 10px;
+        margin-top: 18px;
+    }
+
+    .sc-action-buttons .sc-btn {
+        padding: 11px 16px;
+    }
+
+    .sc-success-message {
+        padding: 18px;
+        margin-bottom: 18px;
+        border-radius: 5px;
+    }
+
+    .sc-success-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .sc-success-message h3 {
+        font-size: 15px;
+        margin-bottom: 4px;
+    }
+
+    .sc-success-message p {
+        font-size: 12px;
+    }
+
+    .sc-steps-container {
+        gap: 15px;
+    }
+
+    .sc-step {
+        gap: 12px;
+    }
+
+    .sc-step-number {
+        width: 32px;
+        height: 32px;
+        font-size: 13px;
+    }
+
+    .sc-step-content h4 {
+        font-size: 12px;
+        margin-bottom: 2px;
+    }
+
+    .sc-step-content p {
+        font-size: 11px;
+    }
+
+    .sc-alert {
+        padding: 11px 13px;
+        margin-bottom: 12px;
+        font-size: 12px;
+        border-radius: 5px;
+    }
+
+    .sc-form-message {
+        padding: 11px;
+        margin-top: 10px;
+        font-size: 12px;
+        border-radius: 5px;
+    }
+
+    .sc-verify-wrapper {
+        padding: 20px 12px;
+        padding-top: 30px;
+    }
+
+    .sc-verify-container {
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .sc-verify-header {
+        padding: 24px 18px;
+    }
+
+    .sc-verify-header h1 {
+        font-size: 20px;
+        margin-bottom: 4px;
+    }
+
+    .sc-verify-header p {
+        font-size: 12px;
+    }
+
+    .sc-verify-content {
+        padding: 24px 18px;
+    }
+
+    .sc-verify-form {
+        gap: 13px;
+    }
+
+    .sc-verify-result {
+        padding: 16px;
+        margin-bottom: 16px;
+        border-radius: 5px;
+    }
+
+    .sc-verify-result h3 {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .sc-verify-result p {
+        font-size: 11px;
+    }
+
+    .sc-verify-result-item {
+        padding: 5px 0;
+        font-size: 11px;
+    }
+}
